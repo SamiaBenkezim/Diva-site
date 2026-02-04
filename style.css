@@ -1,0 +1,219 @@
+/* 1. The Main Vibe */
+.hidden {
+    display: none ;
+}
+body {
+    background-color: #ffe5ec; /* Light Pink */
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Keep it playful */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+label{
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+    font-weight: 500;
+}
+
+/* 2. The Sparkly Text Box */
+textarea {
+    width: 400px;
+    height: 20px;
+    border-radius: 15px;
+    border: 2px solid #ece03a;
+    padding: 10px;
+    outline: none;
+    /* This makes it "sparkle" */
+    box-shadow: 0 0 15px #ffffff, 0 0 10px #c0cb1a;
+    transition: 0.3s;
+}
+
+textarea:focus {
+    box-shadow: 0 0 25px #fff, 0 0 20px #e1e122;
+    transform: scale(1.05);
+}
+
+/* 3. Floating Animation for Hearts */
+.heart {
+    position: absolute;
+    font-size: 2rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* 4. The "Girl" Emoji styling */
+.emoji-girl {
+   
+    font-size: 90px;
+    margin-bottom: 30px;
+}
+.btn-rd {
+  display: block;
+  margin: 15px auto 0;
+  padding: 10px 20px;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px 10px rgba(255,105,180,0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #ff69b4, 0 0 25px #ffb6c1;
+}
+    .image {
+    margin-top: 80PX;
+}
+.image img {
+    width: 250px;
+    margin: 0 auto 10px auto;
+    display: block;
+    border-radius: 15px;
+}
+
+
+.big-question {
+    color: #3b091b;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+
+.button-area {
+    position: relative; /* Essential for moving the 'No' button */
+    width: 150%;
+    max-width: 400px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    gap: 90px;
+}
+
+button {
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.green-btn {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    background-color: #4caf50;
+    color: white;
+}
+
+.red-btn {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    background-color: #f44336;
+    color: white;
+    position: absolute; /* Allows movement via top/left */
+}
+
+/* Success Message */
+#game-box {
+    background: rgb(251, 236, 253);
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 0 15px 30px rgba(233, 214, 8, 0.1);
+}
+
+.grid-4x4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    max-width: 400px;
+    margin: 20px auto;
+    box-shadow: 0 10px 30px rgb(236, 228, 228)
+}
+
+.card {
+    aspect-ratio: 1/1;
+    background-color: #dd105b;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.card.flipped {
+    background-color: #fff;
+    color: #333;
+    border: 2px solid #d81b60;
+}
+
+.card.matched {
+    visibility: hidden; /* Card disappears when matched */
+}
+
+.stats {
+    font-size: 1.5rem;
+        margin-bottom: 10px;
+}
+
+#screen-diva {
+    position: relative;
+    height: 100vh;
+    background: #fff0f5; /* Light pinkish background */
+    overflow: hidden;
+}
+
+.corner-greeting {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff69b4;
+}
+
+.window-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.typing-window {
+    width: 60%;
+    height: 200px;
+    background: rgb(253, 115, 133);
+    border-radius: 25px;
+    padding: 30px;
+    /* This creates the "inside" shadow effect you asked for */
+    box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.1), 
+                inset -5px -5px 15px rgba(255, 255, 255, 0.8),
+                10px 10px 20px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+    overflow-y: auto;
+}
+
+#typing-window-content {
+    font-family: "Lora",serif;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: #000000;
+}
+
